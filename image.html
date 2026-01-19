@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Image Overlay</title>
+
+  <style>
+    body {
+      background: #f2f2f2;
+    }
+
+    .image-box {
+      position: relative;
+      width: 400px;
+      margin: 50px auto;
+      border: 2px solid red;
+    }
+
+    .image-box img.main {
+      width: 100%;
+      display: block;
+    }
+
+    .image-box img.top {
+      position: absolute;
+      top: 20px;
+      left: 20px;
+      width: 120px;
+      border: 2px solid red;
+    }
+  </style>
+</head>
+
+<body>
+
+  <div class="image-box">
+    <img class="main" src="https://via.placeholder.com/400x300.png?text=Main+Image" alt="Main Image">
+    <img class="top" src="https://via.placeholder.com/120.png?text=Top+Image" alt="Top Image">
+    </div>
+</body>
+</html>
+
