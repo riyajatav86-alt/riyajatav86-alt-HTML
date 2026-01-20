@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background: #0d0202c2;
+}
+
+.ball {
+  width: 80px;
+  height: 100px;
+  border-color: greenyellow;
+  border-radius: 5px;
+  border-radius: 50%;
+  animation: bounce 1s infinite ease-in-out,
+             colorChange 2s infinite;
+}
+
+/* Bounce animation */
+@keyframes bounce {
+  0%   { transform: translateY(0); }
+  50%  { transform: translateY(250px); }
+  100% { transform: translateY(0); }
+}
+
+/* Auto color change */
+@keyframes colorChange {
+  0%   { background: red; }
+  25%  { background: blue; }
+  50%  { background: green; }
+  75%  { background: orange; }
+  100% { background: red; }
+}
+</style>
+</head>
+
+<body>
+  <div class="ball"></div>
+</body>
+</html>

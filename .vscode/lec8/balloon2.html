@@ -5,15 +5,27 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <style>
-        div{
-            background-color: rgb(255, 0, 0);
-            width: 200px;
-            height: 200px;
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background: #d92020;
+        }
+         
+        body{
+            background-color: grass green;
+            width: 50px;
+            height: 50px;
             padding: 2px 3px;
             margin: rgb(255, 251, 0) ;
             border: 5px solid rgb(15, 15, 15);
             border-radius: 100%;
             animation-name: bounce;
+        }
+        Balloon{
+            animation-name: bounce;
+
             animation-timing-function:ease-in;
              animation-iteration-count:infinite;
             animation-direction:alternate;
@@ -25,11 +37,20 @@
             }
             100%
             {
-                transform: translateY rotate(300px);}
+                transform: translateY(300px);}
         }
     </style>
 </head>
 <body>
-     <div class="Ball"></div>
+     <div class="Balloon 1"></div>
+     <div class="ballon 2"></div>
+        <div class="ballon 3"></div>
+        <div class="ballon 4"></div>
+        <div class="ballon 5"></div>
+        <div class="ballon 6"></div>
 </body>
 </html>
+
+
+
+
