@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Balloon Festival</title>
+
+<style>
+/* Body & Sky */
+body {
+  margin: 0;
+  height: 100vh;
+  background: linear-gradient(to top, #87CEEB, #B0E0E6);
+  overflow: hidden;
+  font-family: Arial, sans-serif;
+}
+
+/* Heading */
+h1 {
+  position: absolute;
+  top: 30px;
+  width: 100%;
+  text-align: center;
+  font-size: 48px;
+  color: white;
+  text-shadow: 2px 2px 5px #000;
+  z-index: 10;
+}
+
+/* Balloon common style */
+.balloon {
+  position: absolute;
+  bottom: -120px;
+  width: 60px;
+  height: 80px;
+  border-radius: 50%;
+  animation-name: float;
+  animation-iteration-count: infinite;
+  animation-timing-function: ease-in-out;
+}
+
+/* Balloon string */
+.balloon::after {
+  content: "";
+  position: absolute;
+  width: 2px;
+  height: 50px;
+  background: #555;
+  left: 50%;
+  bottom: -50px;
+}
+
+/* Floating animation */
+@keyframes float {
+  0%   { transform: translateY(0) rotate(0deg); }
+  50%  { transform: translateY(-400px) rotate(10deg); }
+  100% { transform: translateY(-800px) rotate(-10deg); }
+}
+
+/* Different balloons */
+.b1 { left: 5%;  background: red;     animation-duration: 8s; }
+.b2 { left: 15%; background: orange;  animation-duration: 10s; }
+.b3 { left: 25%; background: yellow;  animation-duration: 9s; }
+.b4 { left: 35%; background: green;   animation-duration: 11s; }
+.b5 { left: 45%; background: blue;    animation-duration: 8.5s; }
+.b6 { left: 55%; background: purple;  animation-duration: 10.5s; }
+.b7 { left: 65%; background: pink;    animation-duration: 9.5s; }
+.b8 { left: 75%; background: cyan;    animation-duration: 11.5s; }
+.b9 { left: 85%; background: lime;    animation-duration: 8.8s; }
+.b10{ left: 95%; background: magenta; animation-duration: 12s; }
+
+</style>
+</head>
+
+<body>
+
+<h1>🎈 Welcome to Balloon Festival 🎉</h1>
+
+<div class="balloon b1"></div>
+<div class="balloon b2"></div>
+<div class="balloon b3"></div>
+<div class="balloon b4"></div>
+<div class="balloon b5"></div>
+<div class="balloon b6"></div>
+<div class="balloon b7"></div>
+<div class="balloon b8"></div>
+<div class="balloon b9"></div>
+<div class="balloon b10"></div>
+
+</body>
+</html>
