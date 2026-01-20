@@ -2,43 +2,34 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-
-    
+    <style>
+        div{
+            background-color: rgb(255, 0, 0);
+            width: 200px;
+            height: 200px;
+            padding: 2px 3px;
+            margin: rgb(255, 251, 0) ;
+            border: 5px solid rgb(15, 15, 15);
+            border-radius: 100%;
+            animation-name: bounce;
+            animation-timing-function:ease-in;
+             animation-iteration-count:infinite;
+            animation-direction:alternate;
+        }
+        @keyframes bounce{
+            0%
+            {
+                transform: translateY(0px);
+            }
+            100%
+            {
+                transform: translateY rotate(300px);}
+        }
+    </style>
 </head>
 <body>
-   <div>
-    hello world
-   </div>
-   <style> 
-   div{
-    background-color: yellow;
-    height: 300px;
-    width: 200px;
-    border-color: brown;
-    /*display: block;*/
-    /*display: inline-block;*/
-    /*display: none;*/
-    /*visibility: hidden;*/
-   }
-   
-   span{
-    background-color: lightblue;
-    height: 100px;
-    width: 100px;
-   }
-
-   /* background-color: yellow;
-    /*height: 200px;
-    /*width: 400px;
-    /*display: block;
-    /*display: inline-block;
-    /*display: none;
-    /*visibility: hidden;
-   }
-    
-   </style>
+     <div class="Ball"></div>
 </body>
 </html>
