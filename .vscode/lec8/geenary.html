@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="hi">
+<head>
+<meta charset="UTF-8">
+<title>Green Field with Balloons</title>
+<title>Red Car</title>
+
+<style>
+    body {
+        margin: 0;
+        overflow: hidden;
+        font-family: Arial, sans-serif;
+        background: linear-gradient(#87CEEB, #cceeff);
+    }
+
+    /* Sun */
+    .sun {
+        width: 120px;
+        height: 120px;
+        background: radial-gradient(circle, yellow, orange);
+        border-radius: 50%;
+        position: absolute;
+        top: 20px;
+        right: 50px;
+        box-shadow: 0 0 50px yellow;
+    }
+
+    /* Field */
+    .field {
+        position: absolute;
+        bottom: 0;
+        width: 100%;
+        height: 40%;
+        background: linear-gradient(#1a080b, #27ae60);
+    }
+
+    /* Trees */
+    .tree {
+        position: absolute;
+        bottom: 20%;
+    }
+
+    .tree .trunk {
+        width: 20px;
+        height: 60px;
+        background: brown;
+        margin: auto;
+    }
+
+    .tree .leaves {
+        width: 80px;
+        height: 80px;
+        background: green;
+        border-radius: 50%;
+        margin-top: -40px;
+    }
+
+    /* Balloons */
+    .balloon {
+        width: 40px;
+        height: 55px;
+        border-radius: 50%;
+        position: absolute;
+        bottom: -60px;
+        animation: fly 10s linear infinite;
+    }
+
+    .balloon::after {
+        content: "";
+        width: 2px;
+        height: 30px;
+        background: #555;
+        position: absolute;
+        top: 55px;
+        left: 50%;
+    }
+
+    @keyframes fly {
+        0% {
+            transform: translateY(0);
+            opacity: 1;
+        }
+        100% {
+            transform: translateY(-800px);
+            opacity: 0;
+        }
+    }
+
+    h1 {
+        position: absolute;
+        top: 40%;
+        width: 100%;
+        text-align: center;
+        color: white;
+        font-size: 40px;
+        text-shadow: 2px 2px 5px black;
+    }
+</style>
+</head>
+
+<body>
+
+<div class="sun"></div>
+
+<h3>Welcome to Balloon Festival 🎈</h3>
+
+<!-- Trees -->
+<div class="tree" style="left:50px;">
+    <div class="leaves"></div>
+    
+</div>
+
+<div class="tree" style="left:200px;">
+    <div class="leaves"></div>
+    
+</div>
+
+<div class="tree" style="right:150px;">
+    <div class="leaves"></div>
+    
+</div>
+
+<!-- Field -->
+<div class="field"></div>
+
+<!-- Balloons -->
+<script>
+    const colors = ["red", "blue", "yellow", "pink", "purple", "orange", "green"];
+
+    for (let i = 0; i < 25; i++) {
+        let balloon = document.createElement("div");
+        balloon.className = "balloon";
+        balloon.style.left = Math.random() * 100 + "vw";
+        balloon.style.background = colors[Math.floor(Math.random() * colors.length)];
+        balloon.style.animationDuration = (6 + Math.random() * 6) + "s";
+        document.body.appendChild(balloon);
+    }
+</script>
+
+</body>
+</html>
+<div class="balloon b2"></div>
+<div class="balloon b3"></div>
+<div class="balloon b4"></div>
+<div class="balloon b5"></div>
+<div class="balloon b6"></div>
